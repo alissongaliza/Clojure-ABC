@@ -10,16 +10,16 @@
 
 
 (defn createFridge [ingredients]
-  (let [uri "mongodb://<alisson>:<Tw1!4&$jF8m>@ds141178.mlab.com:41178/todays-menu"
+  (let [uri "mongodb://alisson:Tw1!4&$jF8m@ds141178.mlab.com:41178/todays-menu"
         {:keys [conn db]} (mg/connect-via-uri uri)
-        uniqueID (ObjectId.)
+        uniqueID (ObjectId)
         fridgeIngredients {:ingredients ingredients}
         collection "fridges"]
    (mc/insert db collection (merge fridgeIngredients {:_id uniqueID}))
    (ok {:id uniqueID})))
 
 (defn updateFridge [ingredients id]
-  (let [uri "mongodb://<alisson>:<Tw1!4&$jF8m>@ds141178.mlab.com:41178/todays-menu"
+  (let [uri "mongodb://alisson:Tw1!4&$jF8m@ds141178.mlab.com:41178/todays-menu"
         {:keys [conn db]} (mg/connect-via-uri uri)
         collection "fridges"]
     (mc/update-by-id db collection id {$addToSet {:ingredients [ingredients]}})

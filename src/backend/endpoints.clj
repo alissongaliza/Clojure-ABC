@@ -8,6 +8,8 @@
 
 (def user-routes
   [
+   (GET "/ping" []
+     (ok "pong"))
    (POST "/fridge" []
      :body [ingredients [Ingredient]]
      (createFridge ingredients)

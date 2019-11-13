@@ -9,7 +9,9 @@
                   [com.novemberain/monger "3.1.0"]
                   ; Password Hashing
                   [buddy/buddy-hashers "1.3.0"]]
-   :ring {:handler backend.handler/app}
+   :ring {:handler backend.handler/app
+          :auto-reload? true
+          :auto-refresh? true}
    :uberjar-name "server.jar"
    :main backend.core
    :profiles {:dev {:dependencies [[javax.servlet/javax.servlet-api "3.1.0"]]
