@@ -1,4 +1,4 @@
-(ns my-api.schemas
+(ns backend.schemas
   (:require [schema.core :as s]))
 
 
@@ -21,5 +21,5 @@
 
 (s/defschema Fridge
              {:ingredients [Ingredient]
-              })
+              :_id s/Int})
 
