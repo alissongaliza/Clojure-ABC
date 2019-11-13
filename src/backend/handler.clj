@@ -5,7 +5,7 @@
             [monger.core :as mg]
             [monger.collection :as mc]
             [monger.operators :refer :all]
-            [my-api.schemas :refer [Ingredient Recipe Fridge]])
+            [backend.schemas :refer [Ingredient Recipe Fridge]])
   (:import org.bson.types.ObjectId))
 
 

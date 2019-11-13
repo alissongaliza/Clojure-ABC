@@ -2,7 +2,7 @@
   (:require [compojure.api.sweet :refer :all]
             [ring.adapter.jetty :refer [run-jetty]]
             [ring.util.http-response :refer :all]
-            [my-api.endpoints :refer [user-routes]])
+            [backend.endpoints :refer [user-routes]])
   (:gen-class))
 
 (def swagger-config

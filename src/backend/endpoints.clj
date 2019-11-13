@@ -1,9 +1,9 @@
-(ns my-api.endpoints
+(ns backend.endpoints
   (:gen-class)
   (:require [compojure.api.sweet :refer [POST GET PUT]]
             [ring.util.http-response :refer :all]
-            [my-api.schemas :refer [Ingredient Recipe]]
-            [my-api.handler :refer [updateFridge createFridge getAllFridges]]))
+            [backend.schemas :refer [Ingredient Recipe]]
+            [backend.handler :refer [updateFridge createFridge getAllFridges]]))
 
 
 (def user-routes
