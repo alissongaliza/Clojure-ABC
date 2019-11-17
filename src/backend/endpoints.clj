@@ -3,7 +3,7 @@
   (:require [compojure.api.sweet :refer [POST GET PUT]]
             [ring.util.http-response :refer :all]
             [backend.schemas :refer [Ingredient Recipe]]
-            [backend.handler :refer [updateFridge createFridge getAllFridges]]))
+            [backend.handler :refer [updateFridge createFridge getAllFridges getRecipes]]))
 
 
 (def user-routes
@@ -19,4 +19,6 @@
      (updateFridge ingredients id))
    (GET "/fridge" []
      (getAllFridges))
+   (GET "/fridge/:id/recipes" [id]
+     (getRecipes id))
    ])
